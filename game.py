@@ -72,10 +72,12 @@ class TicTacToe:
             return True
         if all(s == letter for s in col):
             return True
-        if all(s == letter for s in diagnal1):
-            return True
-        if all(s == letter for s in diagnal2):
-            return True
+        # the only possible value of diagnols are [0,2,4,6,8]
+        if square % 2 == 0:
+            if all(s == letter for s in diagnal1):
+                return True
+            if all(s == letter for s in diagnal2):
+                return True
 
 
 def play(game, x_player, o_player, print_game=True):
