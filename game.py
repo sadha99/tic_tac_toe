@@ -1,6 +1,5 @@
 import math
 import time
-from unicodedata import name
 from player import HumanPlayer
 from player import RandomComputerPlayer
 
